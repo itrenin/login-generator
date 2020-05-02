@@ -10,3 +10,40 @@ body {
     	color: green;
     }
 }
+header {
+    text-align: center;
+}
+
+.container{
+    max-width: 1100 px;
+    margin: 50px auto;
+}
+.main-form{}
+#full-name-form{
+    display: flex;
+    flex-direction: column;
+}
+.form-preferences{
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    .checks{
+        display: flex;
+        justify-content: center;
+
+    }
+    .check{
+        margin-right: 15px;
+    }
+}
+.symbols-number{
+    display: flex;
+    justify-content: center;
+}
+.form-data{
+    text-align: center;
+    #full-name{
+        width: 320px;
+    }
+}
+.results{}

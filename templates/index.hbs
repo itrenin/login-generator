@@ -8,20 +8,48 @@
 </head>
 
 <body>
+    <div class="container">
 
-    <header>
-        <span>Какой-то текст в хэдере</span>
-    </header>
 
-    <section>
-        Главная секция с формой
-    </section>
-    <section>
-        {{ result.password }}
-    </section>
+        <header>
+            <H3>Генератор логина и пароля для пользователя CRM</H3>
+        </header>
 
-    <footer>Футер</footer>
+        <section class="main-form">
+            пароль включает:
+            <form id="full-name-form">
+                <div class="form-preferences">
+                    <div class="checks">
+                        <label for="letters">обычные буквы
+                            <input class="check" type="checkbox" name="letters" id="letters" checked></label>
+                        <label for="upper">строчные буквы
+                            <input class="check" type="checkbox" name="upper" id="upper" checked></label>
+                        <label for="digits">цыфры
+                            <input class="check" type="checkbox" name="digits" id="digits" checked></label>
+                        <label for="symbols">символы
+                            <input class="check" type="checkbox" name="symbols" id="symbols"></label>
+                    </div>
+                    <div class="symbols-number">
+                        <label for="number-of-symbols"> количество символов в пароле
+                        <input type="text" id="number-of-symbols" value="8" name="number-of-symbols" minlength="1"
+                        maxlength="2" size="2" placeholder="8"></label>
+                   
+                    </div>
+                </div>
+                <div class="form-data">
+                    <input type="text" id="full-name" placeholder="Вставить ФИО сюда" maxlength="520">
+                    <br><button id="result-button">Нажми меня!</button>
+                </div>
+            </form>
+        </section>
+        <section class="results">
+            {{> "./result.hbs"}}
+        </section>
 
+        <!--
+    <footer>Футер</footer> --->
+
+    </div>
 </body>
 
 </html>
