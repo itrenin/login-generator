@@ -1,49 +1,56 @@
-@import "./css/normalize.css";
-@import "./css/font-awesome.min.css";
-@import "./css/styles.css";
+@import './css/normalize.css';
+@import './css/font-awesome.min.css';
+@import './css/styles.css';
 
 body {
-    a {
-        color: yellow;
-    }
-    p {
-    	color: green;
-    }
+  a {
+    color: yellow;
+  }
+  p {
+    color: green;
+  }
 }
 header {
-    text-align: center;
+  text-align: center;
 }
 
-.container{
-    max-width: 1100 px;
-    margin: 50px auto;
+.container {
+  max-width: 1100 px;
+  margin: 50px auto;
 }
-.main-form{}
-#full-name-form{
+.main-form {
+  #full-name-form {
     display: flex;
     flex-direction: column;
+  }
 }
-.form-preferences{
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    .checks{
-        display: flex;
-        justify-content: center;
 
-    }
-    .check{
-        margin-right: 15px;
-    }
-}
-.symbols-number{
+.form-preferences {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  .checks {
     display: flex;
     justify-content: center;
+  }
+  .check {
+    margin-right: 15px;
+  }
 }
-.form-data{
+.symbols-number {
+  display: flex;
+  justify-content: center;
+}
+.form-data {
+  text-align: center;
+  #full-name {
+    width: 320px;
+  }
+}
+.results {
+  .err {
+    color: red;
+    font-weight: 900;
     text-align: center;
-    #full-name{
-        width: 320px;
-    }
+  }
 }
-.results{}

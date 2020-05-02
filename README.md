@@ -1,5 +1,8 @@
-Webpack + SASS + Handlebars + Dev Server Boilerplate
+Password and Login generator from full name in input line
 ==================
+
+To check it in work go to the url
+`https://itrenin.github.io/login-generator/build/`
 
 To get started run:
 `npm install`
