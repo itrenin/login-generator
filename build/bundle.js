@@ -647,6 +647,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var resultDiv = document.querySelector('#result');
 var fullNameField = document.querySelector('#full-name');
 var resultButton = document.querySelector('#result-button');
+var passwordButton = document.querySelector('#password-button');
 var checkLetters = document.querySelector('#letters');
 var checkUpper = document.querySelector('#upper');
 var checkDigits = document.querySelector('#digits');
@@ -696,6 +697,23 @@ resultButton.addEventListener('click', function (e) {
 
   console.log(result);
   fullNameField.value = '';
+  resultDiv.innerHTML = __WEBPACK_IMPORTED_MODULE_2__templates_result_hbs___default()(result);
+});
+passwordButton.addEventListener('click', function (e) {
+  e.preventDefault();
+  var passwordLength = numberOfSymbols.value;
+  var content = {};
+  checkLetters.checked && (content.letters = letters);
+  checkUpper.checked && (content.capitalsLetters = capitalsLetters);
+  checkDigits.checked && (content.digits = digits);
+  checkSymbols.checked && (content.symbols = symbols);
+  var result = {
+    password1: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__passwordGenerator__["a" /* default */])(passwordLength, content),
+    password2: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__passwordGenerator__["a" /* default */])(passwordLength, content),
+    password3: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__passwordGenerator__["a" /* default */])(passwordLength, content),
+    password4: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__passwordGenerator__["a" /* default */])(passwordLength, content),
+    password5: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__passwordGenerator__["a" /* default */])(passwordLength, content)
+  };
   resultDiv.innerHTML = __WEBPACK_IMPORTED_MODULE_2__templates_result_hbs___default()(result);
 });
 
@@ -1079,8 +1097,8 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
         return undefined
     };
 
-  return "        <div class=\"full-name\">ФИО: "
-    + container.escapeExpression(((helper = (helper = lookupProperty(helpers,"fullName") || (depth0 != null ? lookupProperty(depth0,"fullName") : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"fullName","hash":{},"data":data,"loc":{"start":{"line":6,"column":36},"end":{"line":6,"column":50}}}) : helper)))
+  return "        <div class=\"full-name\">ФИО:&nbsp&nbsp&nbsp&nbsp"
+    + container.escapeExpression(((helper = (helper = lookupProperty(helpers,"fullName") || (depth0 != null ? lookupProperty(depth0,"fullName") : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"fullName","hash":{},"data":data,"loc":{"start":{"line":6,"column":55},"end":{"line":6,"column":69}}}) : helper)))
     + "</div>\r\n";
 },"5":function(container,depth0,helpers,partials,data) {
     var helper, lookupProperty = container.lookupProperty || function(parent, propertyName) {
@@ -1090,8 +1108,8 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
         return undefined
     };
 
-  return "        <br>\r\n        <div class=\"login\">Логин: "
-    + container.escapeExpression(((helper = (helper = lookupProperty(helpers,"login") || (depth0 != null ? lookupProperty(depth0,"login") : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"login","hash":{},"data":data,"loc":{"start":{"line":10,"column":34},"end":{"line":10,"column":45}}}) : helper)))
+  return "        <br>\r\n        <div class=\"login\">Логин:&nbsp&nbsp&nbsp&nbsp"
+    + container.escapeExpression(((helper = (helper = lookupProperty(helpers,"login") || (depth0 != null ? lookupProperty(depth0,"login") : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"login","hash":{},"data":data,"loc":{"start":{"line":10,"column":53},"end":{"line":10,"column":64}}}) : helper)))
     + "</div>\r\n";
 },"7":function(container,depth0,helpers,partials,data) {
     var helper, lookupProperty = container.lookupProperty || function(parent, propertyName) {
@@ -1101,8 +1119,8 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
         return undefined
     };
 
-  return "        <br>\r\n        <div class=\"pass\">Пароль 1: "
-    + container.escapeExpression(((helper = (helper = lookupProperty(helpers,"password1") || (depth0 != null ? lookupProperty(depth0,"password1") : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"password1","hash":{},"data":data,"loc":{"start":{"line":14,"column":36},"end":{"line":14,"column":51}}}) : helper)))
+  return "        <br>\r\n        <div class=\"pass\">Пароль 1:&nbsp&nbsp&nbsp&nbsp"
+    + container.escapeExpression(((helper = (helper = lookupProperty(helpers,"password1") || (depth0 != null ? lookupProperty(depth0,"password1") : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"password1","hash":{},"data":data,"loc":{"start":{"line":14,"column":55},"end":{"line":14,"column":70}}}) : helper)))
     + "</div>\r\n";
 },"9":function(container,depth0,helpers,partials,data) {
     var helper, lookupProperty = container.lookupProperty || function(parent, propertyName) {
@@ -1112,8 +1130,8 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
         return undefined
     };
 
-  return "        <br>\r\n        <div class=\"pass\">Пароль 2: "
-    + container.escapeExpression(((helper = (helper = lookupProperty(helpers,"password2") || (depth0 != null ? lookupProperty(depth0,"password2") : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"password2","hash":{},"data":data,"loc":{"start":{"line":18,"column":36},"end":{"line":18,"column":51}}}) : helper)))
+  return "        <br>\r\n        <div class=\"pass\">Пароль 2:&nbsp&nbsp&nbsp&nbsp"
+    + container.escapeExpression(((helper = (helper = lookupProperty(helpers,"password2") || (depth0 != null ? lookupProperty(depth0,"password2") : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"password2","hash":{},"data":data,"loc":{"start":{"line":18,"column":55},"end":{"line":18,"column":70}}}) : helper)))
     + "</div>\r\n";
 },"11":function(container,depth0,helpers,partials,data) {
     var helper, lookupProperty = container.lookupProperty || function(parent, propertyName) {
@@ -1123,8 +1141,8 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
         return undefined
     };
 
-  return "        <br>\r\n        <div class=\"pass\">Пароль 3: "
-    + container.escapeExpression(((helper = (helper = lookupProperty(helpers,"password3") || (depth0 != null ? lookupProperty(depth0,"password3") : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"password3","hash":{},"data":data,"loc":{"start":{"line":22,"column":36},"end":{"line":22,"column":51}}}) : helper)))
+  return "        <br>\r\n        <div class=\"pass\">Пароль 3:&nbsp&nbsp&nbsp&nbsp"
+    + container.escapeExpression(((helper = (helper = lookupProperty(helpers,"password3") || (depth0 != null ? lookupProperty(depth0,"password3") : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"password3","hash":{},"data":data,"loc":{"start":{"line":22,"column":55},"end":{"line":22,"column":70}}}) : helper)))
     + "</div>\r\n";
 },"13":function(container,depth0,helpers,partials,data) {
     var helper, lookupProperty = container.lookupProperty || function(parent, propertyName) {
@@ -1134,8 +1152,8 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
         return undefined
     };
 
-  return "        <br>\r\n        <div class=\"pass\">Пароль 4: "
-    + container.escapeExpression(((helper = (helper = lookupProperty(helpers,"password4") || (depth0 != null ? lookupProperty(depth0,"password4") : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"password4","hash":{},"data":data,"loc":{"start":{"line":26,"column":36},"end":{"line":26,"column":51}}}) : helper)))
+  return "        <br>\r\n        <div class=\"pass\">Пароль 4:&nbsp&nbsp&nbsp&nbsp"
+    + container.escapeExpression(((helper = (helper = lookupProperty(helpers,"password4") || (depth0 != null ? lookupProperty(depth0,"password4") : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"password4","hash":{},"data":data,"loc":{"start":{"line":26,"column":55},"end":{"line":26,"column":70}}}) : helper)))
     + "</div>\r\n";
 },"15":function(container,depth0,helpers,partials,data) {
     var helper, lookupProperty = container.lookupProperty || function(parent, propertyName) {
@@ -1145,8 +1163,8 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
         return undefined
     };
 
-  return "        <br>\r\n        <div class=\"pass\">Пароль 5: "
-    + container.escapeExpression(((helper = (helper = lookupProperty(helpers,"password5") || (depth0 != null ? lookupProperty(depth0,"password5") : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"password5","hash":{},"data":data,"loc":{"start":{"line":30,"column":36},"end":{"line":30,"column":51}}}) : helper)))
+  return "        <br>\r\n        <div class=\"pass\">Пароль 5:&nbsp&nbsp&nbsp&nbsp"
+    + container.escapeExpression(((helper = (helper = lookupProperty(helpers,"password5") || (depth0 != null ? lookupProperty(depth0,"password5") : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"password5","hash":{},"data":data,"loc":{"start":{"line":30,"column":55},"end":{"line":30,"column":70}}}) : helper)))
     + "</div>\r\n";
 },"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, alias1=depth0 != null ? depth0 : (container.nullContext || {}), lookupProperty = container.lookupProperty || function(parent, propertyName) {
