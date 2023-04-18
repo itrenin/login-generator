@@ -15,7 +15,7 @@
     "@babel/preset-env": "^7.9.5",
     "algoliasearch": "^3.22.1",
     "babel-loader": "^8.1.0",
-    "css-loader": "^0.28.1",
+    "css-loader": "^6.7.3",
     "cyrillic-to-translit-js": "^3.1.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "handlebars": "^4.0.8",
