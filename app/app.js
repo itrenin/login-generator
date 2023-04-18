@@ -6,6 +6,7 @@ import isEmpty from './isEmpty'
 const resultDiv = document.querySelector('#result')
 const fullNameField = document.querySelector('#full-name')
 const resultButton = document.querySelector('#result-button')
+const passwordButton = document.querySelector('#password-button')
 const checkLetters = document.querySelector('#letters')
 const checkUpper = document.querySelector('#upper')
 const checkDigits = document.querySelector('#digits')
@@ -63,6 +64,27 @@ resultButton.addEventListener('click', (e) => {
 
   console.log(result)
   fullNameField.value = ''
+
+  resultDiv.innerHTML = render(result)
+})
+passwordButton.addEventListener('click', (e) => {
+  e.preventDefault()
+  const passwordLength = numberOfSymbols.value
+
+  let content = {}
+
+  checkLetters.checked && (content.letters = letters)
+  checkUpper.checked && (content.capitalsLetters = capitalsLetters)
+  checkDigits.checked && (content.digits = digits)
+  checkSymbols.checked && (content.symbols = symbols)
+
+  const result = {
+    password1: generator(passwordLength, content),
+    password2: generator(passwordLength, content),
+    password3: generator(passwordLength, content),
+    password4: generator(passwordLength, content),
+    password5: generator(passwordLength, content)
+  }
 
   resultDiv.innerHTML = render(result)
 })
